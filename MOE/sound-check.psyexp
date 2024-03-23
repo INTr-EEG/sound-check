@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2021.2.3">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'Audio': &quot;['Yes', 'No']&quot;, 'Debug': &quot;['No', 'Yes']&quot;}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="['resources/aud/slide-01.m4a', 'resources/aud/slide-02.m4a', 'resources/aud/Tone audio.m4a', 'resources/imgs/slides/slide-01.png', 'resources/imgs/slides/slide-02.png']" valType="list"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save hdf5 file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1512, 982]" valType="list"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[1,1,1]" valType="color"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="elAddress" updates="None" val="100.1.1.1" valType="str"/>
+    <Param name="elDataFiltering" updates="None" val="FILTER_LEVEL_2" valType="str"/>
+    <Param name="elLiveFiltering" updates="None" val="FILTER_LEVEL_OFF" valType="str"/>
+    <Param name="elModel" updates="None" val="EYELINK 1000 DESKTOP" valType="str"/>
+    <Param name="elPupilAlgorithm" updates="None" val="ELLIPSE_FIT" valType="str"/>
+    <Param name="elPupilMeasure" updates="None" val="PUPIL_AREA" valType="str"/>
+    <Param name="elSampleRate" updates="None" val="1000" valType="num"/>
+    <Param name="elSimMode" updates="None" val="False" valType="bool"/>
+    <Param name="elTrackEyes" updates="None" val="RIGHT_EYE" valType="str"/>
+    <Param name="elTrackingMode" updates="None" val="PUPIL_CR_TRACKING" valType="str"/>
+    <Param name="expName" updates="None" val="S-CLAS" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="eyetracker" updates="None" val="None" valType="str"/>
+    <Param name="gpAddress" updates="None" val="127.0.0.1" valType="str"/>
+    <Param name="gpPort" updates="None" val="4242" valType="num"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="mgBlink" updates="None" val="('MIDDLE_BUTTON',)" valType="list"/>
+    <Param name="mgMove" updates="None" val="CONTINUOUS" valType="str"/>
+    <Param name="mgSaccade" updates="None" val="0.5" valType="num"/>
+    <Param name="tbLicenseFile" updates="None" val="" valType="str"/>
+    <Param name="tbModel" updates="None" val="" valType="str"/>
+    <Param name="tbSampleRate" updates="None" val="60" valType="num"/>
+    <Param name="tbSerialNo" updates="None" val="" valType="str"/>
+  </Settings>
+  <Routines>
+    <Routine name="intr1">
+      <CodeComponent name="begin_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="&amp;#10;# Might want to remove audio toggle eventually&amp;#10;#expInfo[&quot;Debug&quot;] = &quot;No&quot;&amp;#10;#expInfo[&quot;Audio&quot;] = &quot;Yes&quot;&amp;#10;&amp;#10;expVersion = &quot;2022.09.23&quot;&amp;#10;AUD_DIR = &quot;resources/aud&quot;&amp;#10;IMGS_DIR = &quot;resources/imgs&quot;&amp;#10;SLIDES_DIR = f&quot;{IMGS_DIR}/slides&quot;&amp;#10;&amp;#10;USE_AUDIO = expInfo[&quot;Audio&quot;] == &quot;Yes&quot;&amp;#10;SHOW_DEBUG = expInfo[&quot;Debug&quot;] == &quot;Yes&quot;&amp;#10;&amp;#10;CLICK_BOX_OPACITY = 0.2 if SHOW_DEBUG else 0&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;Slides are 1920 × 1080 pixels.&amp;#10;Positions and sizes of clickable areas are hard &amp;#10;coded, so changing this will break _everything_!&amp;#10;&amp;#10;&quot;&quot;&quot;&amp;#10;SLIDE_H = 0.7&amp;#10;SLIDE_W = SLIDE_H / 1080 * 1920&amp;#10;SLIDE_SIZE = (SLIDE_W, SLIDE_H)&amp;#10;&amp;#10;# &quot;Next&quot; button at top-right&amp;#10;NEXT_POS = (0.515, 0.290)&amp;#10;NEXT_SIZE = (0.165, 0.075)&amp;#10;NEXT = make_rect(&quot;next&quot;, NEXT_POS, NEXT_SIZE, CLICK_BOX_OPACITY)&amp;#10;&amp;#10;PLAY_POS = (-0.005, -0.109)&amp;#10;PLAY_SIZE = (0.108, 0.108)&amp;#10;PLAY =  make_circle(&quot;play&quot;, PLAY_POS, PLAY_SIZE, None, &quot;white&quot;)&amp;#10;&amp;#10;# For covering &quot;Next&quot; button&amp;#10;COVER_SIZE = (0.17, 0.08)&amp;#10;COVER = make_rect(&quot;cover&quot;, NEXT_POS, COVER_SIZE, None, &quot;white&quot;, 0, &quot;white&quot;)&amp;#10;&amp;#10;&amp;#10;# Global mouse&amp;#10;MOUSE = core.Mouse(win=win)&amp;#10;MOUSE_L = 0&amp;#10;MOUSE_L_prev = 0&amp;#10;&amp;#10;# Global sound&amp;#10;SOUND = None&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="expVersion = &quot;2022.09.23&quot;;&amp;#10;AUD_DIR = &quot;resources/aud&quot;;&amp;#10;IMGS_DIR = &quot;resources/imgs&quot;;&amp;#10;SLIDES_DIR = `${IMGS_DIR}/slides`;&amp;#10;USE_AUDIO = (expInfo[&quot;Audio&quot;] === &quot;Yes&quot;);&amp;#10;SHOW_DEBUG = (expInfo[&quot;Debug&quot;] === &quot;Yes&quot;);&amp;#10;CLICK_BOX_OPACITY = (SHOW_DEBUG ? 0.2 : 0);&amp;#10;/*&amp;#10;Slides are 1920 × 1080 pixels.&amp;#10;Positions and sizes of clickable areas are hard&amp;#10;coded, so changing this will break _everything_!&amp;#10;*/&amp;#10;SLIDE_H = 0.7;&amp;#10;SLIDE_W = ((SLIDE_H / 1080) * 1920);&amp;#10;SLIDE_SIZE = [SLIDE_W, SLIDE_H];&amp;#10;NEXT_POS = [0.515, 0.29];&amp;#10;NEXT_SIZE = [0.165, 0.075];&amp;#10;NEXT = make_rect(&quot;next&quot;, NEXT_POS, NEXT_SIZE, CLICK_BOX_OPACITY);&amp;#10;PLAY_POS = [(- 0.005), (- 0.109)];&amp;#10;PLAY_SIZE = [0.108, 0.108];&amp;#10;PLAY = make_circle(&quot;play&quot;, PLAY_POS, PLAY_SIZE, null, &quot;white&quot;);&amp;#10;COVER_SIZE = [0.17, 0.08];&amp;#10;COVER = make_rect(&quot;cover&quot;, NEXT_POS, COVER_SIZE, null, &quot;white&quot;, 0, &quot;white&quot;);&amp;#10;MOUSE = new core.Mouse({&quot;win&quot;: psychoJS.window});&amp;#10;MOUSE_L = 0;&amp;#10;MOUSE_L_prev = 0;&amp;#10;SOUND = null;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="slide = make_slide(&quot;slide-01&quot;);&amp;#10;slide.autoDraw = true;&amp;#10;NEXT.autoDraw = true;&amp;#10;if (USE_AUDIO) {&amp;#10;    aud_file = `${AUD_DIR}/slide-01.m4a`;&amp;#10;    SOUND = make_sound(&quot;sound&quot;, aud_file);&amp;#10;    SOUND_DUR = SOUND.getDuration();&amp;#10;    SOUND_START = 0;&amp;#10;    SOUND.play();&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;slide = make_slide(&quot;slide-01&quot;)&amp;#10;slide.autoDraw = True&amp;#10;NEXT.autoDraw = True&amp;#10;&amp;#10;if USE_AUDIO: &amp;#10;    aud_file = f&quot;{AUD_DIR}/slide-01.m4a&quot;&amp;#10;    SOUND = make_sound(&quot;sound&quot;, aud_file)&amp;#10;    SOUND_DUR = SOUND.getDuration()&amp;#10;    SOUND_START = 0&amp;#10;    SOUND.play()&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="&amp;#10;# Clicking on &quot;Next&quot; is always enabled here&amp;#10;MOUSE_L = MOUSE.getPressed()[0]&amp;#10;if MOUSE_L_prev != MOUSE_L:&amp;#10;    MOUSE_L_prev = MOUSE_L&amp;#10;    if MOUSE_L and NEXT.contains(MOUSE):&amp;#10;        continueRoutine = False&amp;#10;        &amp;#10;if t - SOUND_START - 1 &gt;= SOUND_DUR:&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;if SHOW_DEBUG:&amp;#10;    begin_text.text = f&quot;&quot;&quot;&amp;#10;aud_file = {aud_file}&amp;#10;t = {round(t, 3)}&amp;#10;sound_completed = {t - SOUND_START &gt;= SOUND_DUR}&amp;#10;&quot;&quot;&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="MOUSE_L = MOUSE.getPressed()[0];&amp;#10;if ((MOUSE_L_prev !== MOUSE_L)) {&amp;#10;    MOUSE_L_prev = MOUSE_L;&amp;#10;    if ((MOUSE_L &amp;&amp; NEXT.contains(MOUSE))) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;}&amp;#10;if ((((t - SOUND_START) - 1) &gt;= SOUND_DUR)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;if (SHOW_DEBUG) {&amp;#10;    begin_text.text = `&amp;#10;aud_file = ${aud_file}&amp;#10;t = ${round(t, 3)}&amp;#10;sound_completed = ${((t - SOUND_START) &gt;= SOUND_DUR)}`&amp;#10;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="NEXT.autoDraw = false;&amp;#10;slide.autoDraw = false;&amp;#10;if (USE_AUDIO) {&amp;#10;    SOUND.stop();&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="&amp;#10;NEXT.autoDraw = False&amp;#10;slide.autoDraw = False&amp;#10;&amp;#10;if USE_AUDIO:&amp;#10;    SOUND.stop()&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="begin_code" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="functions_g">
+        <Param name="Before Experiment" updates="constant" val="&amp;#10;def make_sound(name, filepath):&amp;#10;    return sound.Sound(&amp;#10;        win=win,&amp;#10;        value=filepath,&amp;#10;        secs=-1,&amp;#10;        stereo=True,&amp;#10;        hamming=True,&amp;#10;        name=name&amp;#10;    )&amp;#10;&amp;#10;def make_img(name, file_name, pos, size, opacity):&amp;#10;    return visual.ImageStim(&amp;#10;        win=win,&amp;#10;        name=name,&amp;#10;        image=file_name,&amp;#10;        pos=pos,&amp;#10;        size=size,&amp;#10;        opacity=opacity&amp;#10;    )&amp;#10;&amp;#10;def make_slide(name, pos=(0, 0), size=SLIDE_SIZE):&amp;#10;    return make_img(&amp;#10;        name,&amp;#10;        f&quot;{SLIDES_DIR}/{name}.png&quot;,&amp;#10;        pos, size, 1&amp;#10;    )&amp;#10;&amp;#10;def make_rect(&amp;#10;    name, pos, size, opacity,&amp;#10;    lineColor=&quot;green&quot;,&amp;#10;    lineWidth=3,&amp;#10;    fillColor=None&amp;#10;):&amp;#10;    if fillColor is not None:&amp;#10;        fillColor = util.Color(fillColor)&amp;#10;    if lineColor is not None:&amp;#10;        lineColor = util.Color(lineColor)&amp;#10;    return visual.Rect(&amp;#10;        win=win,&amp;#10;        name=name,&amp;#10;        width=size[0],&amp;#10;        height=size[1],&amp;#10;        pos=pos,&amp;#10;        lineWidth=lineWidth,&amp;#10;        lineColor=lineColor,&amp;#10;        fillColor=fillColor,&amp;#10;        opacity=opacity&amp;#10;    )&amp;#10;&amp;#10;def make_boxes(names, xys, sizes, opacity=CLICK_BOX_OPACITY, lineColor=&quot;green&quot;):&amp;#10;    cimgs = []&amp;#10;    for i in range(len(names)):&amp;#10;        cimgs.append(make_rect(names[i], xys[i], sizes[i], opacity, lineColor))&amp;#10;    return cimgs&amp;#10;&amp;#10;def make_circle(&amp;#10;    name, pos, size,&amp;#10;    fillColor=&quot;black&quot;,&amp;#10;    lineColor=&quot;black&quot;,&amp;#10;    lineWidth=3,&amp;#10;    opacity=1&amp;#10;):&amp;#10;    if lineColor is not None:&amp;#10;        lineColor = util.Color(lineColor)&amp;#10;    if fillColor is not None:&amp;#10;        fillColor = util.Color(fillColor)&amp;#10;    return visual.Polygon(&amp;#10;        win=win,&amp;#10;        name=name,&amp;#10;        edges=360,&amp;#10;        size=size,&amp;#10;        pos=pos,&amp;#10;        lineWidth=lineWidth,&amp;#10;        lineColor=lineColor,&amp;#10;        fillColor=fillColor,&amp;#10;        opacity=opacity&amp;#10;    )&amp;#10;&amp;#10;def make_radio0(name, pos):&amp;#10;    return make_circle(name, pos, (0.03, 0.03), None, &quot;black&quot;)&amp;#10;&amp;#10;def make_radio1(name, pos):&amp;#10;    return make_circle(name, pos, (0.023, 0.023), &quot;black&quot;, None, 0)&amp;#10;&amp;#10;def find_min_y(cimgs):&amp;#10;    min_y = 0.5&amp;#10;    for cimg in cimgs:&amp;#10;        y = cimg.pos[1] - (cimg.height / 2)&amp;#10;        if min_y &gt; y:&amp;#10;            min_y = y&amp;#10;    return min_y&amp;#10;&amp;#10;def make_radios(func, cimgs, res=[], offset=-0.05):&amp;#10;    min_y = find_min_y(cimgs)&amp;#10;    for cimg in cimgs:&amp;#10;        radio_y = min_y + offset&amp;#10;        res.append(func(cimg.name, (cimg.pos[0], radio_y)))&amp;#10;    return res&amp;#10;" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="function make_sound(name, filepath) {&amp;#10;    return new sound.Sound({&quot;win&quot;: psychoJS.window, &quot;value&quot;: filepath, &quot;secs&quot;: (- 1), &quot;stereo&quot;: true, &quot;hamming&quot;: true, &quot;name&quot;: name});&amp;#10;}&amp;#10;function make_img(name, file_name, pos, size, opacity) {&amp;#10;    return new visual.ImageStim({&quot;win&quot;: psychoJS.window, &quot;name&quot;: name, &quot;image&quot;: file_name, &quot;pos&quot;: pos, &quot;size&quot;: size, &quot;opacity&quot;: opacity});&amp;#10;}&amp;#10;function make_slide(name, pos = [0, 0], size = SLIDE_SIZE) {&amp;#10;    return make_img(name, `${SLIDES_DIR}/${name}.png`, pos, size, 1);&amp;#10;}&amp;#10;function make_rect(name, pos, size, opacity, lineColor = &quot;green&quot;, lineWidth = 3, fillColor = null) {&amp;#10;    if ((fillColor !== null)) {&amp;#10;        fillColor = new util.Color(fillColor);&amp;#10;    }&amp;#10;    if ((lineColor !== null)) {&amp;#10;        lineColor = new util.Color(lineColor);&amp;#10;    }&amp;#10;    return new visual.Rect({&quot;win&quot;: psychoJS.window, &quot;name&quot;: name, &quot;width&quot;: size[0], &quot;height&quot;: size[1], &quot;pos&quot;: pos, &quot;lineWidth&quot;: lineWidth, &quot;lineColor&quot;: lineColor, &quot;fillColor&quot;: fillColor, &quot;opacity&quot;: opacity});&amp;#10;}&amp;#10;function make_boxes(names, xys, sizes, opacity = CLICK_BOX_OPACITY, lineColor = &quot;green&quot;) {&amp;#10;    var cimgs;&amp;#10;    cimgs = [];&amp;#10;    for (var i, _pj_c = 0, _pj_a = util.range(names.length), _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        i = _pj_a[_pj_c];&amp;#10;        cimgs.push(make_rect(names[i], xys[i], sizes[i], opacity, lineColor));&amp;#10;    }&amp;#10;    return cimgs;&amp;#10;}&amp;#10;function make_circle(name, pos, size, fillColor = &quot;black&quot;, lineColor = &quot;black&quot;, lineWidth = 3, opacity = 1) {&amp;#10;    if ((lineColor !== null)) {&amp;#10;        lineColor = new util.Color(lineColor);&amp;#10;    }&amp;#10;    if ((fillColor !== null)) {&amp;#10;        fillColor = new util.Color(fillColor);&amp;#10;    }&amp;#10;    return new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;name&quot;: name, &quot;edges&quot;: 360, &quot;size&quot;: size, &quot;pos&quot;: pos, &quot;lineWidth&quot;: lineWidth, &quot;lineColor&quot;: lineColor, &quot;fillColor&quot;: fillColor, &quot;opacity&quot;: opacity});&amp;#10;}&amp;#10;function make_radio0(name, pos) {&amp;#10;    return make_circle(name, pos, [0.03, 0.03], null, &quot;black&quot;);&amp;#10;}&amp;#10;function make_radio1(name, pos) {&amp;#10;    return make_circle(name, pos, [0.023, 0.023], &quot;black&quot;, null, 0);&amp;#10;}&amp;#10;function find_min_y(cimgs) {&amp;#10;    var min_y, y;&amp;#10;    min_y = 0.5;&amp;#10;    for (var cimg, _pj_c = 0, _pj_a = cimgs, _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        cimg = _pj_a[_pj_c];&amp;#10;        y = (cimg.pos[1] - (cimg.height / 2));&amp;#10;        if ((min_y &gt; y)) {&amp;#10;            min_y = y;&amp;#10;        }&amp;#10;    }&amp;#10;    return min_y;&amp;#10;}&amp;#10;function make_radios(func, cimgs, res = [], offset = (- 0.05)) {&amp;#10;    var min_y, radio_y;&amp;#10;    min_y = find_min_y(cimgs);&amp;#10;    for (var cimg, _pj_c = 0, _pj_a = cimgs, _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;        cimg = _pj_a[_pj_c];&amp;#10;        radio_y = (min_y + offset);&amp;#10;        res.push(func(cimg.name, [cimg.pos[0], radio_y]));&amp;#10;    }&amp;#10;    return res;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="functions_g" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="begin_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="begin_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0.6, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="intr2">
+      <CodeComponent name="intr2_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="psychoJS.experiment.addData(&quot;expVersion&quot;, expVersion);&amp;#10;response = null;&amp;#10;has_responded = false;&amp;#10;slide = make_slide(&quot;slide-02&quot;);&amp;#10;slide.autoDraw = true;&amp;#10;PLAY.autoDraw = true;&amp;#10;NEXT.autoDraw = true;&amp;#10;COVER.autoDraw = true;&amp;#10;COVER.opacity = 1;&amp;#10;if (USE_AUDIO) {&amp;#10;    aud_file = `${AUD_DIR}/slide-02.m4a`;&amp;#10;    SOUND = make_sound(&quot;sound&quot;, aud_file);&amp;#10;    SOUND_DUR = SOUND.getDuration();&amp;#10;    SOUND_START = 0;&amp;#10;    SLIDE_SOUND_START = 0;&amp;#10;    SOUND.play();&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="&amp;#10;thisExp.addData(&quot;expVersion&quot;, expVersion)&amp;#10;&amp;#10;response = None&amp;#10;has_responded = False&amp;#10;&amp;#10;slide = make_slide(&quot;slide-02&quot;)&amp;#10;slide.autoDraw = True&amp;#10;&amp;#10;PLAY.autoDraw = True&amp;#10;NEXT.autoDraw = True&amp;#10;COVER.autoDraw = True&amp;#10;COVER.opacity = 1&amp;#10;&amp;#10;if USE_AUDIO:&amp;#10;    aud_file = f&quot;{AUD_DIR}/slide-02.m4a&quot;&amp;#10;    SOUND = make_sound(&quot;sound&quot;, aud_file)&amp;#10;    SOUND_DUR = SOUND.getDuration()&amp;#10;    SOUND_START = 0&amp;#10;    SLIDE_SOUND_START = 0&amp;#10;    SOUND.play()&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="&amp;#10;# Adding a block comment here will screw everything up! Bet you didn't know that!&amp;#10;&amp;#10;MOUSE_L = MOUSE.getPressed()[0]&amp;#10;if MOUSE_L_prev != MOUSE_L:&amp;#10;    MOUSE_L_prev = MOUSE_L&amp;#10;    if MOUSE_L:&amp;#10;        if has_responded and NEXT.contains(MOUSE):&amp;#10;            continueRoutine = False&amp;#10;        if PLAY.contains(MOUSE):&amp;#10;            has_responded = True&amp;#10;            COVER.opacity = 0&amp;#10;            if t - SOUND_START &lt; SOUND_DUR:&amp;#10;                # Will only work if the sound has not ended yet&amp;#10;                SOUND.stop()&amp;#10;            aud_file = f&quot;{AUD_DIR}/Tone audio.m4a&quot;&amp;#10;            SOUND = make_sound(&quot;sound&quot;, aud_file)&amp;#10;            SOUND_DUR = SOUND.getDuration()&amp;#10;            SOUND_START = t&amp;#10;            SLIDE_SOUND_START = t&amp;#10;            SOUND.play()&amp;#10;&amp;#10;&amp;#10;if SHOW_DEBUG:&amp;#10;    intr2_text.text = f&quot;&quot;&quot;&amp;#10;aud_file = {aud_file}&amp;#10;slide_num = {slide.name}&amp;#10;response = {response}&amp;#10;has_responded = {has_responded}&amp;#10;t = {round(t, 3)}&amp;#10;&quot;&quot;&quot;&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="MOUSE_L = MOUSE.getPressed()[0];&amp;#10;if ((MOUSE_L_prev !== MOUSE_L)) {&amp;#10;    MOUSE_L_prev = MOUSE_L;&amp;#10;    if (MOUSE_L) {&amp;#10;        if ((has_responded &amp;&amp; NEXT.contains(MOUSE))) {&amp;#10;            continueRoutine = false;&amp;#10;        }&amp;#10;        if (PLAY.contains(MOUSE)) {&amp;#10;            has_responded = true;&amp;#10;            COVER.opacity = 0;&amp;#10;            if (((t - SOUND_START) &lt; SOUND_DUR)) {&amp;#10;                SOUND.stop();&amp;#10;            }&amp;#10;            aud_file = `${AUD_DIR}/Tone audio.m4a`;&amp;#10;            SOUND = make_sound(&quot;sound&quot;, aud_file);&amp;#10;            SOUND_DUR = SOUND.getDuration();&amp;#10;            SOUND_START = t;&amp;#10;            SLIDE_SOUND_START = t;&amp;#10;            SOUND.play();&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (SHOW_DEBUG) {&amp;#10;    intr2_text.text = `&amp;#10;aud_file = ${aud_file}&amp;#10;slide_num = ${slide.name}&amp;#10;response = ${response}&amp;#10;has_responded = ${has_responded}&amp;#10;t = ${round(t, 3)}`&amp;#10;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if (USE_AUDIO) {&amp;#10;    SOUND.stop();&amp;#10;}&amp;#10;slide.size = [0, 0];&amp;#10;slide.autoDraw = false;&amp;#10;NEXT.autoDraw = false;&amp;#10;PLAY.autoDraw = false;&amp;#10;COVER.autoDraw = false;&amp;#10;psychoJS.experiment.addData(&quot;response&quot;, response);&amp;#10;psychoJS.experiment.addData(&quot;end_timestamp&quot;, util.MonotonicClock.getDateStr());&amp;#10;psychoJS.experiment.addData(&quot;total_seconds&quot;, globalClock.getTime());&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="&amp;#10;if USE_AUDIO:&amp;#10;    SOUND.stop()&amp;#10;&amp;#10; &amp;#10;slide.size = (0, 0)&amp;#10;slide.autoDraw = False&amp;#10;NEXT.autoDraw = False&amp;#10;PLAY.autoDraw = False&amp;#10;COVER.autoDraw = False&amp;#10;&amp;#10;thisExp.addData(&quot;response&quot;, response)&amp;#10;&amp;#10;# Record timestamp and total time&amp;#10;thisExp.addData(&quot;end_timestamp&quot;, util.MonotonicClock.getDateStr())&amp;#10;thisExp.addData(&quot;total_seconds&quot;, globalClock.getTime())&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="intr2_code" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="intr2_text">
+        <Param name="color" updates="constant" val="black" valType="color"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="contrast" updates="constant" val="1" valType="num"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="None" valType="str"/>
+        <Param name="font" updates="constant" val="Open Sans" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.02" valType="num"/>
+        <Param name="name" updates="None" val="intr2_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="" valType="num"/>
+        <Param name="ori" updates="constant" val="0" valType="num"/>
+        <Param name="pos" updates="constant" val="(0.6, 0)" valType="list"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="num"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="intr1"/>
+    <Routine name="intr2"/>
+  </Flow>
+</PsychoPy2experiment>
